@@ -7,4 +7,5 @@ email:String,
 password:String
 });
 
-export default mongoose.model("recruiter", RecruiterSchema);
+//export default mongoose.model("recruiter", RecruiterSchema);
+export default mongoose.model("Recruiter", RecruiterSchema);

@@ -18,4 +18,5 @@ const candidateSchema = new mongoose.Schema({
     startDate:String
 });
 
-export default mongoose.model("Candidates", candidateSchema);
+//export default mongoose.model("Candidates", candidateSchema);
+export default mongoose.model("Candidate", candidateSchema);

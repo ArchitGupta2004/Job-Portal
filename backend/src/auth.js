@@ -17,12 +17,13 @@ export const recruiterLogin=async(req,resp)=>{
         }
     }catch(error){
         console.log(error)
-        resp.status(500).send("there are some internal error")
+       console.log(error);
+resp.status(500).send(error.message);
     }
 };
 export const recruiterRegister=async(req,resp)=>{
     try{
-        const db=req.app.locals.db;
+       // const db=req.app.locals.db;
         const {name,email,password}=req.body
         const user=await Recruiter.findOne({email:email})
         const salt= await bcrypt.genSalt(10)
@@ -41,7 +42,8 @@ export const recruiterRegister=async(req,resp)=>{
         
         
     }catch(error){
-        resp.status(500).send("there are some error in your internal code")
+        console.log("Error in recruiterRegister: ", error);
+        resp.status(500).send("Error in code: " + error.message);
     }
 };
 export const c_register=async(req,resp)=>{
