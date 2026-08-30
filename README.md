@@ -1,20 +1,29 @@
-Job Portal
+💼 Job Portal
 
-A full-stack job portal application built with Node.js, Express.js, MongoDB, Mongoose, EJS, HTML, CSS, and JavaScript. The application provides separate candidate and recruiter workflows for managing job listings and applications.
+A Full-Stack Recruitment Platform for Candidates & Recruiters
 
-Overview
+A full-stack job portal application built with Node.js, Express.js,
+MongoDB, Mongoose, EJS, HTML, CSS, and JavaScript, providing separate
+workflows for candidates and recruiters.
+
+🚀 Overview
 
 The project implements a complete job-search and recruitment workflow:
 
-Candidates can create accounts, log in, browse jobs, search/filter opportunities, save jobs, apply to jobs, and track their applications.
+Candidates can create accounts, log in, browse jobs, search/filter
+opportunities, save jobs, apply to jobs, and track their
+applications.
 
-Recruiters can create accounts, log in, post and manage jobs, view applicants, review candidate profiles, and update application decisions.
+Recruiters can create accounts, log in, post and manage jobs, view
+applicants, review candidate profiles, and update application
+decisions.
 
-Authentication, session handling, password hashing, database persistence, and basic security middleware are handled on the backend.
+Authentication, session handling, password hashing, database
+persistence, and security middleware are implemented on the backend.
 
-Key Features
+✨ Key Features
 
-Candidate
+👨‍💻 Candidate
 
 Candidate registration and login
 
@@ -34,9 +43,9 @@ Save jobs for later
 
 Manage saved jobs
 
-Candidate profile/dashboard
+Candidate dashboard
 
-Recruiter
+🏢 Recruiter
 
 Recruiter registration and login
 
@@ -44,7 +53,9 @@ Recruiter dashboard
 
 Create job listings
 
-Update and delete posted jobs
+Update job listings
+
+Delete job listings
 
 View applicants for jobs
 
@@ -52,57 +63,26 @@ View candidate information
 
 Accept or reject applications
 
-Manage recruiter-side job/application workflows
+Manage recruiter-side job and application workflows
 
-Tech Stack
+🛠️ Tech Stack
 
-Backend
+Backend: Node.js, Express.js, Mongoose
+Database: MongoDB
+Frontend: EJS, HTML5, CSS3, JavaScript
+Authentication & Security: bcrypt, express-session, Helmet
+Development Tools: Git, GitHub, VS Code, Postman
 
-Node.js
+🏗️ Architecture
 
-Express.js
+The application follows a server-side rendered web architecture with
+separate workflows for candidates and recruiters.
 
-Mongoose
-
-Database
-
-MongoDB
-
-Frontend
-
-EJS
-
-HTML5
-
-CSS3
-
-JavaScript
-
-Authentication & Security
-
-bcrypt
-
-express-session
-
-Helmet
-
-Development Tools
-
-Git
-
-GitHub
-
-VS Code
-
-Architecture
-
-The application follows a server-side rendered web architecture with separate areas for candidates and recruiters.
-
-                    Job Portal
+                    JOB PORTAL
                         |
               +---------+---------+
               |                   |
-          Candidate           Recruiter
+          CANDIDATE           RECRUITER
               |                   |
         EJS / Browser       EJS / Browser
               |                   |
@@ -110,30 +90,32 @@ The application follows a server-side rendered web architecture with separate ar
                         |
                  Express.js Server
                         |
-              Controllers / Routes
+              Routes / Controllers
                         |
                     Mongoose
                         |
-                    MongoDB
+                     MongoDB
 
-Project Structure
+📁 Project Structure
 
 Job-Portal/
+│
 ├── frontend/
 │   ├── views/
 │   ├── public/
 │   └── ...
+│
 ├── backend/
 │   ├── controllers/
 │   ├── models/
 │   ├── routes/
 │   └── ...
+│
 ├── package.json
+├── LICENSE
 └── README.md
 
-The exact folders may vary slightly depending on the current repository structure.
-
-Application Flow
+🔄 Application Flow
 
 Candidate Flow
 
@@ -163,9 +145,9 @@ Review Candidate
        ↓
 Accept / Reject Application
 
-Security
+🔐 Security
 
-The backend includes:
+The application implements:
 
 Password hashing using bcrypt
 
@@ -175,9 +157,9 @@ Security headers using Helmet
 
 MongoDB persistence through Mongoose
 
-Sensitive credentials and environment-specific configuration should be kept outside the repository using environment variables.
+Environment variables for sensitive configuration
 
-Getting Started
+⚙️ Getting Started
 
 Prerequisites
 
@@ -191,56 +173,77 @@ MongoDB
 
 Git
 
-Clone the Repository
+1. Clone the Repository
 
 git clone https://github.com/ArchitGupta2004/Job-Portal.git
 cd Job-Portal
 
-Install Dependencies
-
-Install the dependencies required by the backend:
+2. Install Dependencies
 
 cd backend
 npm install
 
-If the frontend has its own package configuration, install its dependencies from the frontend directory as well.
+3. Environment Configuration
 
-Environment Configuration
-
-Create the required environment configuration for your local setup.
+Create a .env file and configure the required environment variables.
 
 Example:
 
 MONGO_URI=your_mongodb_connection_string
 SESSION_SECRET=your_session_secret
 
-Use the variable names required by the current backend configuration.
-
-Run the Application
-
-Start the backend using the project's configured start command.
+4. Run the Application
 
 npm start
 
-Then open the application in your browser using the local URL configured by the server.
+Then open the application using the local URL configured by the server.
 
-What I Built
+💡 What I Built
 
-This project gave me hands-on experience building a recruitment workflow from both sides of a hiring platform.
+This project was built to understand how a real recruitment platform
+works from both sides of the hiring process.
 
-The main engineering challenge was keeping the candidate and recruiter workflows connected: a recruiter can create a job, a candidate can apply or save it, and the recruiter can subsequently review that application and update its status.
+Instead of implementing only basic job listings, I connected the
+complete workflow between candidates, recruiters, jobs, applications,
+saved jobs, and application statuses.
 
-This required coordinating routes, controllers, database models, sessions, and server-rendered views across the application.
+A recruiter can create a job, a candidate can discover and apply for it,
+and the recruiter can subsequently review the candidate and update the
+application's decision.
 
-Key Learning Outcomes
+🧠 Biggest Engineering Challenge
+
+The biggest challenge was connecting the candidate and recruiter
+workflows while keeping jobs, applications, saved jobs, and
+application statuses synchronized between the server and MongoDB.
+
+This required coordinating:
+
+Routes
+
+Controllers
+
+Database models
+
+Sessions
+
+Forms
+
+Server-rendered views
+
+Application state
+
+📚 Key Learning Outcomes
 
 Full-stack web application development
 
-Node.js and Express.js backend development
+Node.js backend development
 
-REST-style route and controller design
+Express.js
 
-MongoDB database integration with Mongoose
+MongoDB database integration
+
+Mongoose
 
 Authentication and session management
 
@@ -250,21 +253,23 @@ Candidate and recruiter role-based workflows
 
 CRUD operations
 
-Form handling and server-side rendering with EJS
+Server-side rendering with EJS
 
-Debugging and integrating frontend and backend components
+Database-driven application development
+
+Debugging and troubleshooting
 
 Git and GitHub based development
 
-Future Improvements
+🔮 Future Improvements
 
-Possible next improvements include:
-
-REST API layer for external clients
+Some potential improvements include:
 
 Resume upload and parsing
 
 Email notifications
+
+Application status notifications
 
 Advanced job recommendations
 
@@ -272,22 +277,58 @@ Pagination for job listings and applicants
 
 Automated testing
 
-Improved validation and error handling
+Improved validation and authorization
 
-Production deployment and CI/CD
+Production deployment
+
+CI/CD pipeline
 
 Recruiter analytics dashboard
 
-Candidate application status notifications
+📸 Screenshots
 
-Author
+Screenshots can be added here to showcase:
+
+Candidate Dashboard
+
+Job Search
+
+Job Details
+
+Saved Jobs
+
+Application Tracking
+
+Recruiter Dashboard
+
+Job Management
+
+Applicant Management
+
+🎯 Project Highlights
+
+Area                Implementation
+
+Frontend            EJS, HTML5, CSS3, JavaScript
+Backend             Node.js, Express.js
+Database            MongoDB
+ODM                 Mongoose
+Authentication      Express Session
+Password Security   bcrypt
+Security            Helmet
+Architecture        Client → Server → Database
+User Roles          Candidate & Recruiter
+
+👨‍💻 Author
 
 Archit Gupta
 
 B.Tech Computer Science
 GLA University
 
-GitHub: https://github.com/ArchitGupta2004
+GitHub:
+https://github.com/ArchitGupta2004/Job-Portal
 
-License
+📄 License
+
 This project is available under the repository's existing license.
